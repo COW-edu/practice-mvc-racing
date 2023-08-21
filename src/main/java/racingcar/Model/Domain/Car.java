@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.Model.Domain;
 
 public class Car {
     private final String name;
