@@ -1,5 +1,5 @@
 package racingcar.Controller;
 
-public class Controller {
+public class Controller implements ControllerInterface {
 
 }
