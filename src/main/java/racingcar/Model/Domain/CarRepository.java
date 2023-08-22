@@ -22,6 +22,10 @@ public class CarRepository {
     carNumber += 1;
   }
 
+  public void addCar(List<Car> carList) {
+    this.carList.addAll(carList);
+  }
+
   public Car getCar(int index) {
     return carList.get(index);
   }
