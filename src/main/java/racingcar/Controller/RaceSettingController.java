@@ -2,7 +2,6 @@ package racingcar.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.text.View;
 import racingcar.Model.Domain.Car;
 import racingcar.Model.Domain.RaceRepository;
 import racingcar.View.InputView;

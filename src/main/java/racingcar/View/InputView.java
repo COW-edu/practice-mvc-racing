@@ -7,7 +7,7 @@ import racingcar.View.Util.StringParser;
 public class InputView implements ViewInterface {
   private static ViewInterface instance = null;
 
-  private InputView() {};
+  private InputView() {}
 
   public static ViewInterface getInstance() {
     if (instance == null)
