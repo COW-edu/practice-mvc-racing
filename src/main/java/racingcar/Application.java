@@ -1,7 +1,10 @@
 package racingcar;
 
+import racingcar.Controller.FrontController;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO 구현 진행
+        FrontController frontController = FrontController.getInstance();
+        frontController.service("RaceSetting");
     }
 }
