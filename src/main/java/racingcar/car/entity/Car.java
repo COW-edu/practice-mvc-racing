@@ -31,6 +31,10 @@ public class Car {
 		return position;
 	}
 
+	public boolean isWinner(Car car, int maxPosition) {
+		return car.getPosition() == maxPosition;
+	}
+
 	private boolean iForwardCondition(int randomNumber) {
 		return randomNumber >= FORWARD_CONDITION;
 	}
