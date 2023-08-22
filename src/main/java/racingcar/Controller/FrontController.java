@@ -2,9 +2,6 @@ package racingcar.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import racingcar.View.InputView;
-import racingcar.View.OutputView;
-import racingcar.View.ViewInterface;
 
 public class FrontController {
   private static FrontController instance = null;
