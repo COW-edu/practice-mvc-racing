@@ -13,4 +13,8 @@ public interface GameManger {
 	int getRound();
 
 	List<Car> roundStart();
+
+	void insertWinner();
+
+	String showWinnerSheet();
 }

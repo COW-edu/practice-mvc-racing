@@ -36,4 +36,14 @@ public class GameMangerImpl implements GameManger {
 		carController.setPosition();
 		return carController.getCars();
 	}
+
+	@Override
+	public void insertWinner() {
+		gameController.insertWinner(carController.getCars());
+	}
+
+	@Override
+	public String showWinnerSheet() {
+		return gameController.getWinnerSheet();
+	}
 }
