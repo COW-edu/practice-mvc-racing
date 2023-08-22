@@ -29,5 +29,6 @@ public class FrontController {
 
   public void service(String message) {
     ControllerInterface controller = controllers.get(message);
+    controller.run();
   }
 }
