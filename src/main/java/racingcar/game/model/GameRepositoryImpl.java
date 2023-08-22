@@ -1,6 +1,7 @@
 package racingcar.game.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import racingcar.game.entity.Winner;
@@ -8,7 +9,7 @@ import racingcar.game.entity.Winner;
 public class GameRepositoryImpl implements GameRepository {
 
 	private int roundCount;
-	private final List<Winner> winners = new ArrayList<>();
+	private List<Winner> winners = new ArrayList<>();
 
 	@Override
 	public void saveRound(int roundCount) {
@@ -20,4 +21,13 @@ public class GameRepositoryImpl implements GameRepository {
 		return roundCount;
 	}
 
+	@Override
+	public void saveWinners(List<Winner> winners) {
+		this.winners = winners;
+	}
+
+	@Override
+	public List<Winner> findWinners() {
+		return Collections.unmodifiableList(winners);
+	}
 }
