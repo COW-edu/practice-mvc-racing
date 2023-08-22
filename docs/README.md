@@ -12,7 +12,7 @@
 
 #### Car
 
-- [ ] 현재 위치 변경
+- [x] 현재 위치 변경
 
 ### Service
 
@@ -22,7 +22,7 @@
 
 #### RandomNumberGenerator
 
-- [ ] 0~9 사이의 난수 생성
+- [x] 0~9 사이의 난수 생성
 
 #### ResultCalculator
 
