@@ -6,4 +6,8 @@ public class Winner {
 	public Winner(String name) {
 		this.name = name;
 	}
+
+	public String getName() {
+		return name;
+	}
 }
