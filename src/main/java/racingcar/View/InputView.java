@@ -5,11 +5,11 @@ import java.util.List;
 import racingcar.View.Util.StringParser;
 
 public class InputView implements ViewInterface {
-  private static ViewInterface instance = null;
+  private static InputView instance = null;
 
   private InputView() {};
 
-  public static ViewInterface getInstance() {
+  public static InputView getInstance() {
     if (instance == null)
       instance = new InputView();
     return instance;
