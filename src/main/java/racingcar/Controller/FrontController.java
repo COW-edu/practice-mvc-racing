@@ -3,8 +3,8 @@ package racingcar.Controller;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FrontController implements ControllerInterface {
-  private static ControllerInterface instance = null;
+public class FrontController {
+  private static FrontController instance = null;
 
   private final Map<String, ControllerInterface> controllers = new HashMap<>();
 
@@ -12,7 +12,7 @@ public class FrontController implements ControllerInterface {
     initControllers();
   }
 
-  public static ControllerInterface getInstance() {
+  public static FrontController getInstance() {
     if (instance == null)
       instance = new FrontController();
     return instance;
