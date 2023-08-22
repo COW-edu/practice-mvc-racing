@@ -6,6 +6,9 @@ public class Car {
     private final String name;
     private int position = 0;
 
+    private final int MOVE_CONDITION = 4;
+    private final int MOVE_NUMBER = 1;
+
     public Car(String name) {
         this.name = name;
     }
@@ -20,7 +23,7 @@ public class Car {
 
     public void move() {
         int randomNumber = RandomNumberGenerator.generateRandomNumber();
-        if (randomNumber >= 4)
-            position += 1;
+        if (randomNumber >= MOVE_CONDITION)
+            position += MOVE_NUMBER;
     }
 }
