@@ -1,5 +1,8 @@
 package racingcar.game.controller;
 
+import java.util.List;
+
+import racingcar.car.entity.Car;
 import racingcar.game.service.GameService;
 
 public class GameControllerImpl implements GameController {
@@ -18,6 +21,16 @@ public class GameControllerImpl implements GameController {
 	@Override
 	public int getRound() {
 		return gameService.getRound();
+	}
+
+	@Override
+	public void insertWinner(List<Car> cars) {
+		gameService.saveWinner(cars);
+	}
+
+	@Override
+	public String getWinnerSheet() {
+		return gameService.getWinnerSheet();
 	}
 
 }
