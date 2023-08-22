@@ -23,8 +23,8 @@ public class FrontController {
 
   private void initControllers() {
     controllers.put("RaceSetting", RaceSettingController.getInstance());
-    controllers.put("RaceResult", RaceResultController.getInstance());
     controllers.put("RaceRun", RaceRunController.getInstance());
+    controllers.put("RaceResult", RaceResultController.getInstance());
   }
 
   public void service(String message) {
