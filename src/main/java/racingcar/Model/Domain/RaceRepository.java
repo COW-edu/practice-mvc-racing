@@ -3,17 +3,19 @@ package racingcar.Model.Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarRepository {
-  private static CarRepository instance = null;
+public class RaceRepository {
+  private static RaceRepository instance = null;
 
   private List<Car> carList = new ArrayList<>();
   private int carNumber = 0;
 
-  private CarRepository() {}
+  private int attemptTimes;
 
-  public static CarRepository getInstance() {
+  private RaceRepository() {}
+
+  public static RaceRepository getInstance() {
     if (instance == null)
-      instance = new CarRepository();
+      instance = new RaceRepository();
     return instance;
   }
 
@@ -32,5 +34,9 @@ public class CarRepository {
 
   public int getCarNumber() {
     return carNumber;
+  }
+
+  public void setAttemptTimes(int attemptTimes) {
+    this.attemptTimes = attemptTimes;
   }
 }
