@@ -17,6 +17,7 @@ public class RacingStadium {
 		initCar();
 		gameSetting();
 		gameResult();
+		showWinnerSheet();
 	}
 
 	private void initCar() {
@@ -32,11 +33,11 @@ public class RacingStadium {
 	}
 
 	private void gameResult() {
-
 		System.out.println("실행 결과");
-		for (int i = 0; i < gameManger.getRound(); i++) {
+		for (int count = 0; count < gameManger.getRound(); count++) {
 			resultSheet(gameManger.roundStart());
 		}
+		gameManger.insertWinner();
 	}
 
 	private void resultSheet(List<Car> cars) {
@@ -47,5 +48,9 @@ public class RacingStadium {
 
 	private void getEachCarResult(Car car) {
 		System.out.println(car.getName() + " : " + "-".repeat(car.getPosition()));
+	}
+
+	private void showWinnerSheet() {
+		System.out.println("최종 우승자 : " + gameManger.showWinnerSheet());
 	}
 }
