@@ -32,9 +32,6 @@ public class RacingStadium {
 	}
 
 	private void gameResult() {
-		/**
-		 * 스트림..
-		 */
 
 		System.out.println("실행 결과");
 		for (int i = 0; i < gameManger.getRound(); i++) {
@@ -43,13 +40,12 @@ public class RacingStadium {
 	}
 
 	private void resultSheet(List<Car> cars) {
-
-		/**
-		 * 스트림..
-		 */
-		for (Car car : cars) {
-			System.out.println(car.getName() + " : " + "-".repeat(car.getPosition()));
-		}
+		cars.stream()
+			.forEach(this::getEachCarResult);
 		System.out.println();
+	}
+
+	private void getEachCarResult(Car car) {
+		System.out.println(car.getName() + " : " + "-".repeat(car.getPosition()));
 	}
 }
