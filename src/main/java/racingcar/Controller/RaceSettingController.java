@@ -10,4 +10,9 @@ public class RaceSettingController implements ControllerInterface {
       instance = new RaceSettingController();
     return instance;
   }
+
+  @Override
+  public void run() {
+
+  }
 }
