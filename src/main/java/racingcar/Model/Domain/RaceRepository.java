@@ -36,7 +36,7 @@ public class RaceRepository {
     return carNumber;
   }
 
-  public void setAttemptTimes(int attemptTimes) {
+  public void saveAttemptTimes(int attemptTimes) {
     this.attemptTimes = attemptTimes;
   }
 }
