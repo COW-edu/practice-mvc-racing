@@ -1,6 +1,6 @@
 package racingcar.Model.Domain;
 
-드import racingcar.Model.Service.RandomNumberGenerator;
+import racingcar.Model.Util.RandomNumberGenerator;
 
 public class Car {
     private final String name;
