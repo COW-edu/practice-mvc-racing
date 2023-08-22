@@ -10,11 +10,9 @@ public class FrontController {
   private static FrontController instance = null;
 
   private final Map<String, ControllerInterface> controllers = new HashMap<>();
-  private final Map<String, ViewInterface> views = new HashMap<>();
 
   private FrontController() {
     initControllers();
-    initViews();
   }
 
   public static FrontController getInstance() {
@@ -27,11 +25,6 @@ public class FrontController {
     controllers.put("RaceSetting", RaceSettingController.getInstance());
     controllers.put("RaceResult", RaceResultController.getInstance());
     controllers.put("RaceRun", RaceRunController.getInstance());
-  }
-
-  private void initViews() {
-    views.put("InputView", InputView.getInstance());
-    views.put("OutputView", OutputView.getInstance());
   }
 
   public void service(String message) {
