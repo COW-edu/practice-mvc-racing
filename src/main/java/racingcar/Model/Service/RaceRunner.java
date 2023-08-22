@@ -1,5 +1,5 @@
 package racingcar.Model.Service;
 
-public class CalculateResult {
+public class RaceRunner {
 
 }
