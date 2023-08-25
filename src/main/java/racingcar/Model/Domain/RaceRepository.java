@@ -29,4 +29,8 @@ public class RaceRepository {
   public void saveAttemptTimes(int attemptTimes) {
     this.attemptTimes = attemptTimes;
   }
+
+  public int getAttemptTimes() {
+    return attemptTimes;
+  }
 }
