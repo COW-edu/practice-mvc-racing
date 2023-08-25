@@ -21,8 +21,6 @@ public class RunConfig {
     ControllerInterface raceRunController = new RaceRunController(raceRepository, outputView);
     ControllerInterface raceResultController = new RaceResultController(raceRepository, outputView);
 
-    FrontController frontController = new FrontController(raceSettingController, raceRunController, raceResultController, raceRepository, inputView, outputView);
-
-    return frontController;
+    return new FrontController(raceSettingController, raceRunController, raceResultController, raceRepository, inputView, outputView);
   }
 }
