@@ -1,13 +1,16 @@
 package racingcar.Model.Domain;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RaceRepository {
   private List<Car> carList = new ArrayList<>();
   private int carNumber = 0;
 
   private int attemptTimes;
+  private Map<String, Integer> raceState = new HashMap<>();
 
   public void addCar(Car car) {
     carList.add(car);
@@ -35,5 +38,9 @@ public class RaceRepository {
 
   public int getAttemptTimes() {
     return attemptTimes;
+  }
+
+  public void saveRaceState(Map<String, Integer> raceState) {
+    this.raceState = raceState;
   }
 }
