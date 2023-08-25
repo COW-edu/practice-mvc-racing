@@ -43,4 +43,8 @@ public class RaceRepository {
   public void saveRaceState(Map<String, Integer> raceState) {
     this.raceState = raceState;
   }
+
+  public Map<String, Integer> getRaceState() {
+    return raceState;
+  }
 }
