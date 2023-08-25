@@ -8,11 +8,16 @@ import racingcar.View.InputView;
 import racingcar.View.ViewInterface;
 
 public class RaceSettingController implements ControllerInterface {
+  private final RaceRepository raceRepository;
+  private final ViewInterface inputView;
+
+  public RaceSettingController(RaceRepository raceRepository, ViewInterface inputView) {
+    this.raceRepository = raceRepository;
+    this.inputView = inputView;
+  }
+
   @Override
   public void run() {
-    RaceRepository raceRepository = RaceRepository.getInstance();
-    ViewInterface inputView = InputView.getInstance();
-
     List<String> carNameList = ((InputView)inputView).InputCarName();
     int attemptTimes = ((InputView)inputView).InputAttemptTimes();
 
