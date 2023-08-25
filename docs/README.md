@@ -2,9 +2,9 @@
 
 ## Controller
 
-- [ ] InputView를 사용하여 자동차 이름, 시도 횟수 입력 받고 처리
-- [ ] Service와 Model을 사용하여 레이스 진행
-- [ ] OutputView를 사용하여 결과 출력 처리
+- [x] InputView를 사용하여 자동차 이름, 시도 횟수 입력 받고 처리
+- [x] Service와 Model을 사용하여 레이스 진행
+- [x] OutputView를 사용하여 결과 출력 처리
 
 ## Model
 
@@ -18,7 +18,7 @@
 
 #### RunRace
 
-- [ ] 레이스를 1회 진행
+- [x] 레이스를 진행
 
 #### RandomNumberGenerator
 
@@ -26,7 +26,7 @@
 
 #### ResultCalculator
 
-- [ ] 결과 계산 후 우승자 반환
+- [x] 결과 계산 후 우승자 반환
 
 ## View
 
@@ -38,5 +38,5 @@
 
 ### OutputView
 
-- [ ] 실행 결과 출력
-- [ ] 최종 우승자 출력 (단독, 공동 우승에 따라 다르게 출력)
+- [x] 실행 결과 출력
+- [x] 최종 우승자 출력 (단독, 공동 우승에 따라 다르게 출력)
