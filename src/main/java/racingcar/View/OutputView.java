@@ -1,5 +1,6 @@
 package racingcar.View;
 
+import java.util.List;
 import java.util.Map;
 
 public class OutputView implements ViewInterface {
@@ -16,6 +17,16 @@ public class OutputView implements ViewInterface {
       System.out.println();
     }
     System.out.println();
+  }
+
+  public void outputResult(List<String> winners) {
+    System.out.print("최종 우승자 : ");
+    if (winners.size() == 1) {
+      System.out.println(winners.get(0));
+      return;
+    }
+    String result = String.join(", ", winners);
+    System.out.println(result);
   }
 
   @Override
