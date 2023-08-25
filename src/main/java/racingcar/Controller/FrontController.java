@@ -2,7 +2,7 @@ package racingcar.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import racingcar.View.OutputView;
+import racingcar.Model.Domain.RaceRepository;
 import racingcar.View.ViewInterface;
 
 public class FrontController {
@@ -13,11 +13,11 @@ public class FrontController {
   private final ControllerInterface raceResultController;
 
   private final ViewInterface inputView;
-  private final OutputView outputView;
+  private final ViewInterface outputView;
 
-  private FrontController(ControllerInterface raceSettingController,
-      ControllerInterface raceRunController, ControllerInterface raceResultController,
-      ViewInterface inputView, OutputView outputView) {
+  public FrontController(ControllerInterface raceSettingController,
+      ControllerInterface raceRunController, ControllerInterface raceResultController, RaceRepository raceRepository,
+      ViewInterface inputView, ViewInterface outputView) {
     this.raceSettingController = raceSettingController;
     this.raceRunController = raceRunController;
     this.raceResultController = raceResultController;
