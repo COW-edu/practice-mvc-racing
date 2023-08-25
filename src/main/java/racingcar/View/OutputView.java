@@ -10,4 +10,9 @@ public class OutputView implements ViewInterface {
       instance = new OutputView();
     return instance;
   }
+
+  @Override
+  public void render() {
+
+  }
 }
