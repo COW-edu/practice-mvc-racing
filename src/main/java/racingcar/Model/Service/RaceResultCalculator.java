@@ -1,6 +1,6 @@
 package racingcar.Model.Service;
 
-public class ResultCalculator implements ServiceInterface {
+public class RaceResultCalculator implements ServiceInterface {
 
   @Override
   public void run() {
