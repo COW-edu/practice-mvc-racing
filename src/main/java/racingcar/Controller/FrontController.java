@@ -4,24 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FrontController {
-  private static FrontController instance = null;
-
   private final Map<String, ControllerInterface> controllers = new HashMap<>();
 
-  private FrontController() {
+  private final ControllerInterface raceSettingController;
+  private final ControllerInterface raceRunController;
+  private final ControllerInterface raceResultController;
+
+  private FrontController(ControllerInterface raceSettingController,
+      ControllerInterface raceRunController, ControllerInterface raceResultController) {
+    this.raceSettingController = raceSettingController;
+    this.raceRunController = raceRunController;
+    this.raceResultController = raceResultController;
     initControllers();
   }
 
-  public static FrontController getInstance() {
-    if (instance == null)
-      instance = new FrontController();
-    return instance;
-  }
-
   private void initControllers() {
-    controllers.put("RaceSetting", RaceSettingController.getInstance());
-    controllers.put("RaceRun", RaceRunController.getInstance());
-    controllers.put("RaceResult", RaceResultController.getInstance());
+    controllers.put("RaceSetting", raceSettingController);
+    controllers.put("RaceRun", raceRunController);
+    controllers.put("RaceResult", raceResultController);
   }
 
   public void service(String message) {
