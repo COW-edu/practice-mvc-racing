@@ -13,8 +13,9 @@ public class OutputView implements ViewInterface {
       for (int i = 0; i < raceStatePair.getValue(); i++) {
         System.out.print("-");
       }
-      System.out.print("\n\n");
+      System.out.println();
     }
+    System.out.println();
   }
 
   @Override
