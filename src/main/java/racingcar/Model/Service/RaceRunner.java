@@ -1,5 +1,8 @@
 package racingcar.Model.Service;
 
-public class RaceRunner {
+public class RaceRunner implements ServiceInterface {
+  @Override
+  public void run() {
 
+  }
 }
