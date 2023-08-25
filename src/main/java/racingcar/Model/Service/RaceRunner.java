@@ -29,6 +29,7 @@ public class RaceRunner implements ServiceInterface {
         raceState.put(car.getName(), car.getPosition());
       }
       ((OutputView)outputView).outputRunState(raceState);
+      raceRepository.saveRaceState(raceState);
     }
   }
 }
