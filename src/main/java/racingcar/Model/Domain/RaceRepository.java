@@ -21,6 +21,9 @@ public class RaceRepository {
   public Car getCar(int index) {
     return carList.get(index);
   }
+  public List<Car> getCar() {
+    return carList;
+  }
 
   public int getCarNumber() {
     return carNumber;
