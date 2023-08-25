@@ -1,14 +1,15 @@
 package racingcar.Controller;
 
+import racingcar.Model.Domain.RaceRepository;
+import racingcar.View.ViewInterface;
+
 public class RaceResultController implements ControllerInterface {
-  private static ControllerInterface instance = null;
+  private final RaceRepository raceRepository;
+  private final ViewInterface outputView;
 
-  private RaceResultController() {}
-
-  public static ControllerInterface getInstance() {
-    if (instance == null)
-      instance = new RaceResultController();
-    return instance;
+  public RaceResultController(RaceRepository raceRepository, ViewInterface outputView) {
+    this.raceRepository = raceRepository;
+    this.outputView = outputView;
   }
 
   @Override
