@@ -1,13 +1,8 @@
 package racingcar.car.controller;
 
-import java.util.List;
-
-import racingcar.car.entity.Car;
+import racingcar.common.ModelView;
+import racingcar.common.Request;
 
 public interface CarController {
-	void join(String initCars);
-
-	void setPosition();
-
-	List<Car> getCars();
+	ModelView process(Request request);
 }
