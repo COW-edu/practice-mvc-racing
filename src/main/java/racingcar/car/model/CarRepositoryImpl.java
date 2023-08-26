@@ -11,6 +11,15 @@ public class CarRepositoryImpl implements CarRepository {
 
 	private final List<Car> cars = new ArrayList<>();
 
+	private static final CarRepository instance = new CarRepositoryImpl();
+
+	public static CarRepository getInstance() {
+		return instance;
+	}
+
+	private CarRepositoryImpl() {
+	}
+
 	@Override
 	public void saveCar(String initCars) {
 		splitInitCar(initCars);

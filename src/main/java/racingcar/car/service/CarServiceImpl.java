@@ -4,13 +4,18 @@ import java.util.List;
 
 import racingcar.car.entity.Car;
 import racingcar.car.model.CarRepository;
+import racingcar.car.model.CarRepositoryImpl;
 
 public class CarServiceImpl implements CarService {
 
-	private final CarRepository carRepository;
+	private static final CarService instance = new CarServiceImpl();
+	CarRepository carRepository = CarRepositoryImpl.getInstance();
 
-	public CarServiceImpl(CarRepository carRepository) {
-		this.carRepository = carRepository;
+	public static CarService getInstance() {
+		return instance;
+	}
+
+	private CarServiceImpl() {
 	}
 
 	@Override

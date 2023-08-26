@@ -7,13 +7,19 @@ import java.util.stream.Collectors;
 import racingcar.car.entity.Car;
 import racingcar.game.entity.Winner;
 import racingcar.game.model.GameRepository;
+import racingcar.game.model.GameRepositoryImpl;
 
 public class GameServiceImpl implements GameService {
 
-	private final GameRepository gameRepository;
+	private static final GameService instance = new GameServiceImpl();
 
-	public GameServiceImpl(GameRepository gameRepository) {
-		this.gameRepository = gameRepository;
+	GameRepository gameRepository = GameRepositoryImpl.getInstance();
+
+	public static GameService getInstance() {
+		return instance;
+	}
+
+	private GameServiceImpl() {
 	}
 
 	@Override

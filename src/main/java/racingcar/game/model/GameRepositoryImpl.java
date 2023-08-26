@@ -11,6 +11,15 @@ public class GameRepositoryImpl implements GameRepository {
 	private int roundCount;
 	private List<Winner> winners = new ArrayList<>();
 
+	private static final GameRepository instance = new GameRepositoryImpl();
+
+	public static GameRepository getInstance() {
+		return instance;
+	}
+
+	private GameRepositoryImpl() {
+	}
+
 	@Override
 	public void saveRound(int roundCount) {
 		this.roundCount = roundCount;
