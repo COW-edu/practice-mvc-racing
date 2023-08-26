@@ -13,29 +13,29 @@ public class RacingStadium {
 		this.gameManger = gameManger;
 	}
 
-	public void gameStart() {
-		initCar();
-		gameSetting();
+	public void gameProcess() {
+		gameManger.initGame(initCar(), initRound());
 		gameResult();
 		showWinnerSheet();
 	}
 
-	private void initCar() {
+	private String initCar() {
 		System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
 		String initCars = Console.readLine();
-		gameManger.initCar(initCars);
+		return initCars;
 	}
 
-	private void gameSetting() {
+	private int initRound() {
 		System.out.println("시도할 회수는 몇회인가요?");
 		int roundCount = Integer.parseInt(Console.readLine());
-		gameManger.setRound(roundCount);
+		return roundCount;
 	}
 
 	private void gameResult() {
 		System.out.println("실행 결과");
 		for (int count = 0; count < gameManger.getRound(); count++) {
-			resultSheet(gameManger.roundStart());
+			gameManger.roundStart();
+			resultSheet(gameManger.getCars());
 		}
 		gameManger.insertWinner();
 	}
