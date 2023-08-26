@@ -1,8 +1,8 @@
-package racingcar.front.adapter;
+package racingcar.common.front.adapter;
 
 import racingcar.car.controller.CarController;
-import racingcar.front.ModelView;
-import racingcar.front.Request;
+import racingcar.common.ModelView;
+import racingcar.common.Request;
 
 public class CarControllerAdapter implements MyHandlerAdapter {
 	@Override
@@ -12,8 +12,8 @@ public class CarControllerAdapter implements MyHandlerAdapter {
 
 	@Override
 	public ModelView handle(Request request, Object handler) {
-		CarController controllable = (CarController) handler;
-		ModelView modelView = controllable.process(request);
+		CarController carController = (CarController)handler;
+		ModelView modelView = carController.process(request);
 		return modelView;
 	}
 }
