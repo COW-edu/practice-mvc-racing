@@ -13,7 +13,7 @@ public class GameRun implements Runnable {
 	@Override
 	public void run() {
 		try {
-			racingStadium.gameStart();
+			racingStadium.gameProcess();
 		} catch (IllegalArgumentException exception) {
 			System.out.println(exception.getMessage());
 		}
