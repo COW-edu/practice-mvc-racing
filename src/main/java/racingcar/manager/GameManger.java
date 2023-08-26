@@ -6,13 +6,13 @@ import racingcar.car.entity.Car;
 
 public interface GameManger {
 
-	void initCar(String initCars);
-
-	void setRound(int roundCount);
+	void initGame(String initCars, int roundCount);
 
 	int getRound();
 
-	List<Car> roundStart();
+	void roundStart();
+
+	List<Car> getCars();
 
 	void insertWinner();
 
