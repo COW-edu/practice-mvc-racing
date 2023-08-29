@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class RaceRepository {
+
   private List<Car> carList = new ArrayList<>();
   private int carNumber = 0;
 
@@ -24,6 +25,7 @@ public class RaceRepository {
   public Car getCar(int index) {
     return carList.get(index);
   }
+
   public List<Car> getCar() {
     return carList;
   }

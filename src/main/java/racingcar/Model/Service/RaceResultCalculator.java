@@ -9,6 +9,7 @@ import racingcar.View.OutputView;
 import racingcar.View.ViewInterface;
 
 public class RaceResultCalculator implements ServiceInterface {
+
   private final RaceRepository raceRepository;
   private final ViewInterface outputView;
 
@@ -25,6 +26,6 @@ public class RaceResultCalculator implements ServiceInterface {
         .filter(entry -> entry.getValue() == maxValue)
         .map(Map.Entry::getKey)
         .collect(Collectors.toList());
-    ((OutputView)outputView).outputResult(maxKeys);
+    ((OutputView) outputView).outputResult(maxKeys);
   }
 }

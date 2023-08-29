@@ -6,6 +6,7 @@ import racingcar.Model.Domain.RaceRepository;
 import racingcar.View.ViewInterface;
 
 public class FrontController {
+
   private final Map<String, ControllerInterface> controllers = new HashMap<>();
 
   private final ControllerInterface raceSettingController;
@@ -16,7 +17,8 @@ public class FrontController {
   private final ViewInterface outputView;
 
   public FrontController(ControllerInterface raceSettingController,
-      ControllerInterface raceRunController, ControllerInterface raceResultController, RaceRepository raceRepository,
+      ControllerInterface raceRunController, ControllerInterface raceResultController,
+      RaceRepository raceRepository,
       ViewInterface inputView, ViewInterface outputView) {
     this.raceSettingController = raceSettingController;
     this.raceRunController = raceRunController;

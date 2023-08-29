@@ -6,6 +6,7 @@ import racingcar.Model.Service.ServiceInterface;
 import racingcar.View.ViewInterface;
 
 public class RaceSettingController implements ControllerInterface {
+
   private final RaceRepository raceRepository;
   private final ViewInterface inputView;
   private final ServiceInterface raceSetter;

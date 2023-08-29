@@ -10,6 +10,7 @@ import racingcar.View.OutputView;
 import racingcar.View.ViewInterface;
 
 public class RaceRunner implements ServiceInterface {
+
   private final RaceRepository raceRepository;
   private final ViewInterface outputView;
 
@@ -20,14 +21,14 @@ public class RaceRunner implements ServiceInterface {
 
   @Override
   public void run() {
-    ((OutputView)outputView).outputRunTitle();
+    ((OutputView) outputView).outputRunTitle();
     int attemptTimes = raceRepository.getAttemptTimes();
     List<Car> carList = raceRepository.getCar();
     IntStream.range(0, attemptTimes).forEach(i -> {
       Map<String, Integer> raceState = carList.stream()
           .peek(Car::move)
           .collect(Collectors.toMap(Car::getName, Car::getPosition));
-      ((OutputView)outputView).outputRunState(raceState);
+      ((OutputView) outputView).outputRunState(raceState);
       raceRepository.saveRaceState(raceState);
     });
   }

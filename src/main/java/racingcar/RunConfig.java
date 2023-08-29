@@ -11,16 +11,19 @@ import racingcar.View.OutputView;
 import racingcar.View.ViewInterface;
 
 public class RunConfig {
+
   public FrontController runConfig() {
     RaceRepository raceRepository = new RaceRepository();
 
     ViewInterface inputView = new InputView();
     ViewInterface outputView = new OutputView();
 
-    ControllerInterface raceSettingController = new RaceSettingController(raceRepository, inputView);
+    ControllerInterface raceSettingController = new RaceSettingController(raceRepository,
+        inputView);
     ControllerInterface raceRunController = new RaceRunController(raceRepository, outputView);
     ControllerInterface raceResultController = new RaceResultController(raceRepository, outputView);
 
-    return new FrontController(raceSettingController, raceRunController, raceResultController, raceRepository, inputView, outputView);
+    return new FrontController(raceSettingController, raceRunController, raceResultController,
+        raceRepository, inputView, outputView);
   }
 }
