@@ -12,8 +12,8 @@ public class GameControllerAdapter implements MyHandlerAdapter {
 
 	@Override
 	public ModelView handle(Request request, Object handler) {
-		GameController controllable = (GameController)handler;
-		ModelView modelView = controllable.process(request);
+		GameController gameController = (GameController)handler;
+		ModelView modelView = gameController.process(request);
 		return modelView;
 	}
 }

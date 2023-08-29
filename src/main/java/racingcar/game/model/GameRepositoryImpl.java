@@ -39,4 +39,5 @@ public class GameRepositoryImpl implements GameRepository {
 	public List<Winner> findWinners() {
 		return Collections.unmodifiableList(winners);
 	}
+
 }

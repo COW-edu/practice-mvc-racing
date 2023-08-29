@@ -1,9 +1,8 @@
 package racingcar;
 
 import racingcar.common.front.FrontController;
-import racingcar.game.view.RacingStadium;
-import racingcar.manager.GameManger;
-import racingcar.manager.GameMangerImpl;
+import racingcar.view.RacingStadium;
+import racingcar.common.GameManger;
 
 public class GameConfig {
 
@@ -12,11 +11,10 @@ public class GameConfig {
 	}
 
 	public GameManger gameManager() {
-		return new GameMangerImpl(frontController());
+		return new GameManger(frontController());
 	}
 
 	public FrontController frontController() {
 		return new FrontController();
 	}
-
 }

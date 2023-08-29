@@ -5,7 +5,7 @@ import racingcar.common.Request;
 import racingcar.game.service.GameService;
 import racingcar.game.service.GameServiceImpl;
 
-public class GameGetRoundController implements GameController{
+public class GameGetRoundController implements GameController {
 
 	GameService gameService = GameServiceImpl.getInstance();
 
