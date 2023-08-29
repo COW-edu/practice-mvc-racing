@@ -6,7 +6,7 @@ import racingcar.car.entity.Car;
 
 public interface CarRepository {
 
-	void saveCar(String initCars);
+	void saveCar(Car newCar);
 
 	List<Car> findCars();
 
