@@ -7,7 +7,7 @@ public class InputViewImpl implements InputView{
 
   @Override
   public StringTokenizer inputCar() {
-    return new StringTokenizer(Console.readLine());
+    return new StringTokenizer(Console.readLine(),",");
   }
 
   @Override
