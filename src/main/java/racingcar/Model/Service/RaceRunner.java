@@ -3,6 +3,8 @@ package racingcar.Model.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import racingcar.Model.Domain.Car;
 import racingcar.Model.Domain.RaceRepository;
 import racingcar.View.OutputView;
@@ -22,14 +24,12 @@ public class RaceRunner implements ServiceInterface {
     ((OutputView)outputView).outputRunTitle();
     int attemptTimes = raceRepository.getAttemptTimes();
     List<Car> carList = raceRepository.getCar();
-    for (int i = 0; i < attemptTimes; i++) {
-      Map<String, Integer> raceState = new HashMap<>();
-      for (Car car : carList) {
-        car.move();
-        raceState.put(car.getName(), car.getPosition());
-      }
+    IntStream.range(0, attemptTimes).forEach(i -> {
+      Map<String, Integer> raceState = carList.stream()
+          .peek(Car::move)
+          .collect(Collectors.toMap(Car::getName, Car::getPosition));
       ((OutputView)outputView).outputRunState(raceState);
       raceRepository.saveRaceState(raceState);
-    }
+    });
   }
 }
