@@ -1,7 +1,7 @@
 package racingcar.Controller;
 
 import racingcar.Model.Domain.RaceRepository;
-import racingcar.Model.Service.RaceResultCalculator;
+import racingcar.Service.RaceResultCalculator;
 import racingcar.View.ViewInterface;
 
 public class RaceResultController implements ControllerInterface {

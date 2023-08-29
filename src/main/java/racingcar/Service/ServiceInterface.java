@@ -1,4 +1,4 @@
-package racingcar.Model.Service;
+package racingcar.Service;
 
 public interface ServiceInterface {
 

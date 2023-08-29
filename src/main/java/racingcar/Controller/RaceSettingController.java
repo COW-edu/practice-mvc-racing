@@ -1,8 +1,8 @@
 package racingcar.Controller;
 
 import racingcar.Model.Domain.RaceRepository;
-import racingcar.Model.Service.RaceSetter;
-import racingcar.Model.Service.ServiceInterface;
+import racingcar.Service.RaceSetter;
+import racingcar.Service.ServiceInterface;
 import racingcar.View.ViewInterface;
 
 public class RaceSettingController implements ControllerInterface {
