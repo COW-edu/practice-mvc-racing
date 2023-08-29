@@ -1,10 +1,10 @@
-package racingcar.game.view;
+package racingcar.view;
 
 import java.util.List;
 
 import camp.nextstep.edu.missionutils.Console;
-import racingcar.manager.GameManger;
 import racingcar.car.entity.Car;
+import racingcar.common.GameManger;
 
 public class RacingStadium {
 	private final GameManger gameManger;
@@ -27,8 +27,12 @@ public class RacingStadium {
 
 	private int initRound() {
 		System.out.println("시도할 회수는 몇회인가요?");
-		int roundCount = Integer.parseInt(Console.readLine());
-		return roundCount;
+		try {
+			int roundCount = Integer.parseInt(Console.readLine());
+			return roundCount;
+		} catch (Exception exception) {
+			throw new IllegalArgumentException("[ERROR] 정수를 입력해주세요.");
+		}
 	}
 
 	private void gameResult() {
