@@ -1,23 +1,24 @@
 package controller;
 
-import model.domain.RacingGame;
+import model.domain.RacingManager;
 import view.InputView;
+import view.OutputView;
 
 public class RaceController implements Runnable{
 
-  private static final InputView inputView;
-  private static final OutputView outputView;
-  private static final RacingGame racingGame;
-  private static final RacingManager racingManager;
-  public RaceController(InputView inputView,OutputView outputView, RacingGame racingGame, RacingManager racingManager){
+  private final InputView inputView;
+  private final OutputView outputView;
+  private final RacingManager racingManager;
+  public RaceController(InputView inputView, OutputView outputView, RacingManager racingManager){
     this.inputView = inputView;
-    this.racingGame = racingGame;
+    this.outputView = outputView;
     this.racingManager = racingManager;
   }
   @Override
   public void run() {
-    racingGame.register(inputView.inputCar);
-    racingManager.createRound(inputView.inputRound);
-    outputView.showRaceResult(racingManager.startRace(), racingManager.getRaceResult());
+    racingManager.register(inputView.inputCar());
+    racingManager.createRound(inputView.inputRound());
+    outputView.showRace(racingManager.startRace());
+    outputView.showRaceResult(racingManager.getRaceResult());
   }
 }

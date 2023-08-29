@@ -10,17 +10,14 @@ public class RaceConfig {
 
 
   public RaceController raceController() {
-    return new RaceController(inputView(), outputView(), racingGame(), racingManager());
+    return new RaceController(inputView(), outputView(), racingManager());
   }
 
   private InputView inputView(){
     return new InputViewImpl();
   }
-  private OutputView outputView(){
+  private OutputView outputView() {
     return new OutputViewImpl();
-  }
-  private RacingGame racingGame(){
-    return new RacingGame();
   }
   private RacingManager racingManager(){
     return new RacingManager();
