@@ -2,6 +2,7 @@ package racingcar.Model.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import racingcar.Model.Domain.Car;
 import racingcar.Model.Domain.RaceRepository;
 import racingcar.View.InputView;
@@ -21,11 +22,10 @@ public class RaceSetter implements ServiceInterface {
     List<String> carNameList = ((InputView)inputView).InputCarName();
     int attemptTimes = ((InputView)inputView).InputAttemptTimes();
 
-    List<Car> carList = new ArrayList<>();
-    for (String s : carNameList) {
-      Car car = new Car(s);
-      carList.add(car);
-    }
+    List<Car> carList = carNameList.stream()
+        .map(Car::new)
+        .collect(Collectors.toList());
+
     raceRepository.addCar(carList);
 
     raceRepository.saveAttemptTimes(attemptTimes);
