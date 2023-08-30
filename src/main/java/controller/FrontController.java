@@ -4,12 +4,12 @@ import model.domain.RacingManager;
 import view.InputView;
 import view.OutputView;
 
-public class RaceController implements Runnable{
+public class FrontController implements Runnable{
 
   private final InputView inputView;
   private final OutputView outputView;
   private final RacingManager racingManager;
-  public RaceController(InputView inputView, OutputView outputView, RacingManager racingManager){
+  public FrontController(InputView inputView, OutputView outputView, RacingManager racingManager){
     this.inputView = inputView;
     this.outputView = outputView;
     this.racingManager = racingManager;
