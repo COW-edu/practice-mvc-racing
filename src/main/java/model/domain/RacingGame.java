@@ -1,6 +1,5 @@
 package model.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 import model.service.RacingGameService;
@@ -17,4 +16,11 @@ public class RacingGame {
     racingGameService.register(requestRegisterCars);
   }
 
+  public List<String> start(int racingRoundCount) {
+    return racingGameService.start(racingRoundCount);
+  }
+
+  public String checkWinner() {
+    return racingGameService.checkWinner();
+  }
 }
