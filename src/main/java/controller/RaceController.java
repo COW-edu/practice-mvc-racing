@@ -17,8 +17,7 @@ public class RaceController implements Runnable{
   @Override
   public void run() {
     racingManager.register(inputView.inputCar());
-    racingManager.createRound(inputView.inputRound());
-    outputView.showRace(racingManager.startRace());
+    outputView.showRace(racingManager.startRace(inputView.inputRound()));
     outputView.showRaceResult(racingManager.getRaceResult());
   }
 }
