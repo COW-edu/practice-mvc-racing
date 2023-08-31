@@ -12,7 +12,6 @@ public class OutputViewImpl implements OutputView{
 
   @Override
   public void showWinner(String winner) {
-    System.out.print("\n 최종 우승자 : ");
-    System.out.println(winner);
+    System.out.println("최종 우승자 : "+winner);
   }
 }
