@@ -1,37 +1,36 @@
 package racing.controller;
 
-import java.util.List;
 import java.util.StringTokenizer;
-import racing.service.RacingService;
+import racing.service.RacingServiceImpl;
 
 public class RacingController {
 
-  private final RacingService racingService;
+  private final RacingServiceImpl racingServiceImpl;
 
-  public RacingController(RacingService racingService) {
-    this.racingService = racingService;
+  public RacingController(RacingServiceImpl racingServiceImpl) {
+    this.racingServiceImpl = racingServiceImpl;
   }
 
   public String startRace(StringTokenizer requestRegisterCars, int round) {
     register(requestRegisterCars);
     start(round);
-    return showRacing();
+    return getRacingProcess();
   }
 
   private void register(StringTokenizer requestRegisterCars) {
-    racingService.register(requestRegisterCars);
+    racingServiceImpl.register(requestRegisterCars);
   }
 
   private void start(int racingRoundCount) {
-    racingService.start(racingRoundCount);
+    racingServiceImpl.start(racingRoundCount);
   }
 
-  private String showRacing() {
-    return racingService.showRace();
+  private String getRacingProcess() {
+    return racingServiceImpl.getRacingProcess();
   }
 
   public String getWinner() {
-    return racingService.getWinner();
+    return racingServiceImpl.getWinner();
   }
 
 

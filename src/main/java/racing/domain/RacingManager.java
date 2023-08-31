@@ -22,7 +22,7 @@ public class RacingManager {
         .forEach(this.racingProcess::add);
   }
 
-  public String showRaceProcess() {
+  public String getRacingProcess() {
     return racingProcess.stream()
         .collect(Collectors.joining());
   }
