@@ -30,11 +30,11 @@ public class Car {
         return racingResult;
     }
 
-    public void printName(){
-        System.out.println(this.name);
+    public String getName(){
+        return this.name;
     }
 
-    public void rankCheck(Car car){
-
+    public int getPosition(){
+        return position;
     }
 }
