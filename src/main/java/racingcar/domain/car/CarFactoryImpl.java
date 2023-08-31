@@ -8,8 +8,7 @@ public class CarFactoryImpl implements CarFactory {
 
   @Override
   public List<Car> produceCar(List<String> carNames) {
-    return carNames.stream()
-        .map(Car::new)
-        .collect(Collectors.toList());
+    return carNames.stream().map(Car::new).collect(Collectors.toList());
   }
 }
+

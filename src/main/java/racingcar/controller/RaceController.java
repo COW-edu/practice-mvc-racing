@@ -3,7 +3,6 @@ package racingcar.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import racingcar.domain.Garage;
 import racingcar.domain.car.Car;
 import racingcar.domain.car.CarFactory;
 import racingcar.domain.racing.RacingGameManager;
@@ -84,9 +83,7 @@ public class RaceController {
   }
 
   private List<String> convertToStr(List<Car> cars) {
-    return cars.stream()
-        .map(Car::getName)
-        .collect(Collectors.toList());
+    return cars.stream().map(Car::getName).collect(Collectors.toList());
   }
 
   private void promptForPrintingResult(List<String> strCars) {

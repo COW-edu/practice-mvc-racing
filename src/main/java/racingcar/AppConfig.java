@@ -27,6 +27,7 @@ public class AppConfig {
   public CarFactory carFactory() {
     return new CarFactoryImpl();
   }
+
   public RacingGameManager racingGameManager() {
     return new RacingGameManagerImpl();
   }

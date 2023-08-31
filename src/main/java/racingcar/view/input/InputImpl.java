@@ -10,7 +10,7 @@ public class InputImpl implements Input {
   private final static int LIMITED_LENGTH = 5;
 
   @Override
-  public List<String> inputCarName() throws IllegalArgumentException{
+  public List<String> inputCarName() throws IllegalArgumentException {
     List<String> names = new ArrayList<>(List.of(Console.readLine().split(",")));
     names.forEach(this::validateName);
     return names;

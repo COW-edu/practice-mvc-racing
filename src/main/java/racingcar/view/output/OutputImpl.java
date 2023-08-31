@@ -2,7 +2,7 @@ package racingcar.view.output;
 
 import java.util.List;
 
-public class OutputImpl implements Output{
+public class OutputImpl implements Output {
 
   @Override
   public void printGuideMessage(String message) {
