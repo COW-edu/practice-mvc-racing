@@ -6,7 +6,8 @@ import racing.domain.RacingGame;
 import racing.domain.RacingManager;
 
 public class RacingService {
-  private final RacingManager racingManager= new RacingManager();
+
+  private final RacingManager racingManager = new RacingManager();
 
   public void register(StringTokenizer requestRegisterCars) {
     racingManager.registerRacingCars(requestRegisterCars);
@@ -16,9 +17,10 @@ public class RacingService {
     racingManager.raceStart(racingRoundCount);
   }
 
-  public String showRace(){
+  public String showRace() {
     return racingManager.showRaceProcess();
   }
+
   public String getWinner() {
     return racingManager.getWinner();
   }

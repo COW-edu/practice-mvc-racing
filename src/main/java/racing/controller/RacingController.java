@@ -5,10 +5,11 @@ import java.util.StringTokenizer;
 import racing.service.RacingService;
 
 public class RacingController {
+
   private final RacingService racingService;
 
-  public RacingController(RacingService racingService){
-    this.racingService=racingService;
+  public RacingController(RacingService racingService) {
+    this.racingService = racingService;
   }
 
   public String startRace(StringTokenizer requestRegisterCars, int round) {
@@ -22,10 +23,10 @@ public class RacingController {
   }
 
   private void start(int racingRoundCount) {
-     racingService.start(racingRoundCount);
+    racingService.start(racingRoundCount);
   }
 
-  private String showRacing(){
+  private String showRacing() {
     return racingService.showRace();
   }
 

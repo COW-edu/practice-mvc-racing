@@ -2,7 +2,7 @@ package view;
 
 import java.util.List;
 
-public class OutputViewImpl implements OutputView{
+public class OutputViewImpl implements OutputView {
 
   @Override
   public void showRace(String raceProcess) {
@@ -12,6 +12,6 @@ public class OutputViewImpl implements OutputView{
 
   @Override
   public void showWinner(String winner) {
-    System.out.println("최종 우승자 : "+winner);
+    System.out.println("최종 우승자 : " + winner);
   }
 }

@@ -12,7 +12,7 @@ public class RacingGame {
 
   private final List<Car> registeredRacingCars = new ArrayList<>();
 
-  public void addRacingCars(StringTokenizer requestRegisteredRacingCars){
+  public void addRacingCars(StringTokenizer requestRegisteredRacingCars) {
     while (requestRegisteredRacingCars.hasMoreTokens()) {
       registeredRacingCars.add(Car.createCar(requestRegisteredRacingCars.nextToken()));
     }

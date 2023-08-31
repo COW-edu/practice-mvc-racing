@@ -12,7 +12,7 @@ public class RacingManager {
 
   private final List<String> racingProcess = new ArrayList<>();
 
-  public void registerRacingCars(StringTokenizer requestRegisterCars){
+  public void registerRacingCars(StringTokenizer requestRegisterCars) {
     racingGame.addRacingCars(requestRegisterCars);
   }
 
@@ -22,12 +22,12 @@ public class RacingManager {
         .forEach(this.racingProcess::add);
   }
 
-  public String showRaceProcess(){
+  public String showRaceProcess() {
     return racingProcess.stream()
         .collect(Collectors.joining());
   }
 
-  public String getWinner(){
+  public String getWinner() {
     return racingGame.getWinner();
   }
 

@@ -13,13 +13,15 @@ public class RaceConfig {
     return new FrontController(inputView(), outputView(), racingController());
   }
 
-  private InputView inputView(){
+  private InputView inputView() {
     return new InputViewImpl();
   }
+
   private OutputView outputView() {
     return new OutputViewImpl();
   }
-  private RacingController racingController(){
+
+  private RacingController racingController() {
     return new RacingController(new RacingService());
   }
 }
