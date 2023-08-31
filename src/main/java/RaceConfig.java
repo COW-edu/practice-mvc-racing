@@ -1,6 +1,6 @@
-import controller.RaceController;
-import model.domain.RacingGame;
-import model.domain.RacingManager;
+import frontcontroller.FrontController;
+import racing.controller.RacingController;
+import racing.service.RacingService;
 import view.InputView;
 import view.InputViewImpl;
 import view.OutputView;
@@ -9,8 +9,8 @@ import view.OutputViewImpl;
 public class RaceConfig {
 
 
-  public RaceController raceController() {
-    return new RaceController(inputView(), outputView(), racingManager());
+  public FrontController frontController() {
+    return new FrontController(inputView(), outputView(), racingController());
   }
 
   private InputView inputView(){
@@ -19,7 +19,7 @@ public class RaceConfig {
   private OutputView outputView() {
     return new OutputViewImpl();
   }
-  private RacingManager racingManager(){
-    return new RacingManager();
+  private RacingController racingController(){
+    return new RacingController(new RacingService());
   }
 }
