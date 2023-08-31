@@ -1,6 +1,6 @@
 import frontcontroller.FrontController;
 import racing.controller.RacingController;
-import racing.service.RacingService;
+import racing.service.RacingServiceImpl;
 import view.InputView;
 import view.InputViewImpl;
 import view.OutputView;
@@ -22,6 +22,6 @@ public class RaceConfig {
   }
 
   private RacingController racingController() {
-    return new RacingController(new RacingService());
+    return new RacingController(new RacingServiceImpl());
   }
 }
