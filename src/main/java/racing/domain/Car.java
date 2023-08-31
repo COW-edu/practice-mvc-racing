@@ -1,4 +1,4 @@
-package model.domain;
+package racing.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
@@ -11,7 +11,12 @@ public class Car {
     }
 
     // 추가 기능 구현
-    public void moveFoward() {
+
+    public static Car createCar(String name){
+        return new Car(name);
+    }
+
+    public void moveForward() {
         if(Randoms.pickNumberInRange(0,9)>=4) {
             position++;
         }
@@ -22,10 +27,14 @@ public class Car {
         for(int i=0; i<position; i++){
             racingResult.append("-");
         }
-
         return racingResult;
     }
-    public void prinntName(){
+
+    public void printName(){
         System.out.println(this.name);
+    }
+
+    public void rankCheck(Car car){
+
     }
 }
