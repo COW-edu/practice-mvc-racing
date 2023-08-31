@@ -61,6 +61,7 @@ public class RaceController {
     IntStream.range(0, attemptCount).forEach(index -> {
       racingGameManager.race(cars);
       printRaceResult(cars);
+      output.printRaceStatus(NEW_LINE);
     });
   }
 
