@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class RacingManager {
 
@@ -16,21 +17,18 @@ public class RacingManager {
   }
 
   public void raceStart(int racingRoundCount) {
-    for (int i = 0; i < racingRoundCount; i++) {
-      this.racingProcess.add(racingGame.oneGameResult()+"\n");
-    }
+    IntStream.range(0, racingRoundCount)
+        .mapToObj(i -> racingGame.oneGameResult() + "\n")
+        .forEach(this.racingProcess::add);
   }
 
   public String showRaceProcess(){
-
-//    String raceProcess ="";
-//
-//    for(int i=0; i<racingProcess.size(); i++){
-//      raceProcess = raceProcess+racingProcess.get(i);
-//    }
-
     return racingProcess.stream()
         .collect(Collectors.joining());
+  }
+
+  public String getWinner(){
+    return racingGame.checkWinner();
   }
 
 }
