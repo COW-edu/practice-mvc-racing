@@ -28,7 +28,7 @@ public class RacingManager {
   }
 
   public String getWinner(){
-    return racingGame.checkWinner();
+    return racingGame.getWinner();
   }
 
 }
