@@ -1,29 +1,14 @@
 package racing.service;
 
-import java.util.List;
 import java.util.StringTokenizer;
-import racing.domain.RacingGame;
-import racing.domain.RacingManager;
 
-public class RacingService {
+public interface RacingService {
 
-  private final RacingManager racingManager = new RacingManager();
+  void register(StringTokenizer requestRegisterCars);
 
-  public void register(StringTokenizer requestRegisterCars) {
-    racingManager.registerRacingCars(requestRegisterCars);
-  }
+  void start(int racingRoundCount);
 
-  public void start(int racingRoundCount) {
-    racingManager.raceStart(racingRoundCount);
-  }
+  String getRacingProcess();
 
-  public String showRace() {
-    return racingManager.showRaceProcess();
-  }
-
-  public String getWinner() {
-    return racingManager.getWinner();
-  }
-
-
+  String getWinner();
 }
