@@ -1,10 +1,10 @@
-import controller.RaceController;
+import frontcontroller.FrontController;
 
 public class Application {
     public static void main(String[] args) {
         // TODO 구현 진행
         RaceConfig raceConfig = new RaceConfig();
-        RaceController raceController = raceConfig.raceController();
-        raceController.run();
+        FrontController frontController = raceConfig.frontController();
+        frontController.run();
     }
 }

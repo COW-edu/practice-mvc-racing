@@ -6,11 +6,13 @@ public class OutputViewImpl implements OutputView{
 
   @Override
   public void showRace(String raceProcess) {
-
+    System.out.println("실행 결과");
+    System.out.println(raceProcess);
   }
 
   @Override
   public void showWinner(String winner) {
-
+    System.out.print("\n 최종 우승자 : ");
+    System.out.println(winner);
   }
 }
