@@ -8,10 +8,10 @@ import racingcar.utils.message.ErrorMessage;
 public class InputImpl implements Input {
 
   private final static int LIMITED_LENGTH = 5;
-
+  private final static String CAR_SEPARATOR = ",";
   @Override
   public List<String> inputCarName() throws IllegalArgumentException {
-    List<String> names = new ArrayList<>(List.of(Console.readLine().split(",")));
+    List<String> names = new ArrayList<>(List.of(Console.readLine().split(CAR_SEPARATOR)));
     names.forEach(this::validateName);
     return names;
   }

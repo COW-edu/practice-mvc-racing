@@ -3,7 +3,6 @@ package racingcar.domain.racing;
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 import racingcar.domain.car.Car;
 
