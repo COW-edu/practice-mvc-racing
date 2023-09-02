@@ -2,7 +2,6 @@ package racing.controller;
 
 import java.util.StringTokenizer;
 import racing.service.RacingService;
-import racing.service.RacingServiceImpl;
 
 public class RacingController {
 
