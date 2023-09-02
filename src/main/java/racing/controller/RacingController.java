@@ -18,6 +18,11 @@ public class RacingController {
     return getRacingProcess();
   }
 
+  public String getWinner() {
+    return racingService.getWinner();
+  }
+
+
   private void register(StringTokenizer requestRegisterCars) {
     racingService.register(requestRegisterCars);
   }
@@ -28,10 +33,6 @@ public class RacingController {
 
   private String getRacingProcess() {
     return racingService.getRacingProcess();
-  }
-
-  public String getWinner() {
-    return racingService.getWinner();
   }
 
 
