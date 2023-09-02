@@ -2,8 +2,6 @@ package racing.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class RacingManager {
@@ -12,7 +10,7 @@ public class RacingManager {
 
   private final List<String> racingProcess = new ArrayList<>();
 
-  public void registerRacingCars(StringTokenizer requestRegisterCars) {
+  public void registerRacingCars(List<String> requestRegisterCars) {
     racingGame.addRacingCars(requestRegisterCars);
   }
 
@@ -23,8 +21,7 @@ public class RacingManager {
   }
 
   public String getRacingProcess() {
-    return racingProcess.stream()
-        .collect(Collectors.joining());
+    return String.join("", racingProcess);
   }
 
   public String getWinner() {

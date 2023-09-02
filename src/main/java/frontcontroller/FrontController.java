@@ -19,8 +19,11 @@ public class FrontController implements Runnable {
 
   @Override
   public void run() {
-
-    outputView.showRace(racingController.startRace(inputView.inputCar(), inputView.inputRound()));
-    outputView.showWinner(racingController.getWinner());
+    try {
+      outputView.showRace(racingController.startRace(inputView.inputCar(), inputView.inputRound()));
+      outputView.showWinner(racingController.getWinner());
+    } catch (IllegalArgumentException e) {
+      System.out.println(e.getMessage());
+    }
   }
 }

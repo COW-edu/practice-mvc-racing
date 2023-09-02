@@ -1,10 +1,10 @@
 package racing.service;
 
-import java.util.StringTokenizer;
+import java.util.List;
 
 public interface RacingService {
 
-  void register(StringTokenizer requestRegisterCars);
+  void register(List<String> requestRegisterCars);
 
   void start(int racingRoundCount);
 

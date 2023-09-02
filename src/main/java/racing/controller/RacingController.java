@@ -1,6 +1,6 @@
 package racing.controller;
 
-import java.util.StringTokenizer;
+import java.util.List;
 import racing.service.RacingService;
 
 public class RacingController {
@@ -11,7 +11,7 @@ public class RacingController {
     this.racingService = racingService;
   }
 
-  public String startRace(StringTokenizer requestRegisterCars, int round) {
+  public String startRace(List<String> requestRegisterCars, int round) {
     register(requestRegisterCars);
     start(round);
     return getRacingProcess();
@@ -22,7 +22,7 @@ public class RacingController {
   }
 
 
-  private void register(StringTokenizer requestRegisterCars) {
+  private void register(List<String> requestRegisterCars) {
     racingService.register(requestRegisterCars);
   }
 

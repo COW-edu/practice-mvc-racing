@@ -1,10 +1,10 @@
 package view;
 
-import java.util.StringTokenizer;
+import java.util.List;
 
 public interface InputView {
 
-  StringTokenizer inputCar();
+  List<String> inputCar();
 
   int inputRound();
 }

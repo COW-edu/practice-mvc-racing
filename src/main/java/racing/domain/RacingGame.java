@@ -3,24 +3,22 @@ package racing.domain;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 public class RacingGame {
 
   private final List<Car> registeredRacingCars = new ArrayList<>();
 
-  public void addRacingCars(StringTokenizer requestRegisteredRacingCars) {
-    while (requestRegisteredRacingCars.hasMoreTokens()) {
-      registeredRacingCars.add(Car.createCar(requestRegisteredRacingCars.nextToken()));
-    }
+  public void addRacingCars(List<String> requestRegisteredRacingCars) {
+    requestRegisteredRacingCars
+        .forEach(car -> registeredRacingCars.add(Car.createCar(car)));
   }
 
   public String oneGameResult() {
     StringBuilder oneGameResult = new StringBuilder();
-    registeredRacingCars.stream()
-        .forEach(car -> car.moveForward());
-    registeredRacingCars.stream()
+    registeredRacingCars
+        .forEach(Car::moveForward);
+    registeredRacingCars
         .forEach(car -> oneGameResult.append(car.raceResult()).append("\n"));
 
     return String.valueOf(oneGameResult);
