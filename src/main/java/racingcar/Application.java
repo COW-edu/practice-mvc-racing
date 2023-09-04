@@ -10,5 +10,7 @@ public class Application {
     AppConfig appConfig = new AppConfig();
     RaceController raceController = appConfig.raceController();
     raceController.runRacingGame();
+
+    System.out.println();
   }
 }

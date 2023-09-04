@@ -1,8 +1,6 @@
 package racingcar;
 
 import racingcar.controller.RaceController;
-import racingcar.domain.car.CarFactory;
-import racingcar.domain.car.CarFactoryImpl;
 import racingcar.domain.racing.RacingGameManager;
 import racingcar.domain.racing.RacingGameManagerImpl;
 import racingcar.view.input.Input;
@@ -13,7 +11,7 @@ import racingcar.view.output.OutputImpl;
 public class AppConfig {
 
   public RaceController raceController() {
-    return new RaceController(input(), output(), carFactory(), racingGameManager());
+    return new RaceController(input(), output(), racingGameManager());
   }
 
   public Input input() {
@@ -22,10 +20,6 @@ public class AppConfig {
 
   public Output output() {
     return new OutputImpl();
-  }
-
-  public CarFactory carFactory() {
-    return new CarFactoryImpl();
   }
 
   public RacingGameManager racingGameManager() {

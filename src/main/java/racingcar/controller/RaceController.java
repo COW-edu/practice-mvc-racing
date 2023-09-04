@@ -14,16 +14,14 @@ public class RaceController {
 
   private final Input input;
   private final Output output;
-  private final CarFactory carFactory;
   private final RacingGameManager racingGameManager;
   private static final String SEPARATOR = " : ";
   private static final String NEW_LINE = "\n";
 
-  public RaceController(Input input, Output output, CarFactory carFactory,
+  public RaceController(Input input, Output output,
       RacingGameManager racingGameManager) {
     this.input = input;
     this.output = output;
-    this.carFactory = carFactory;
     this.racingGameManager = racingGameManager;
   }
 
@@ -40,11 +38,9 @@ public class RaceController {
   }
 
   private List<Car> promptForCarNames() throws IllegalArgumentException {
-
     output.printGuideMessage(GuideMessage.INPUT_CAR_NAME);
-
     List<String> carNames = input.inputCarName();
-    return carFactory.produceCar(carNames);
+    return CarFactory.produceCar(carNames);
   }
 
   private int promptForAttemptCount() {
