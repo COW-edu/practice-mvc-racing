@@ -6,7 +6,7 @@ import racingcar.domain.car.Car;
 
 public class CarFactory {
 
-  public static List<Car> produceCar(List<String> carNames) {
+  public static List<Car> createCar(List<String> carNames) {
     return carNames.stream().map(Car::new).collect(Collectors.toList());
   }
 }

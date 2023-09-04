@@ -40,7 +40,7 @@ public class RaceController {
   private List<Car> promptForCarNames() throws IllegalArgumentException {
     output.printGuideMessage(GuideMessage.INPUT_CAR_NAME);
     List<String> carNames = input.inputCarName();
-    return CarFactory.produceCar(carNames);
+    return CarFactory.createCar(carNames);
   }
 
   private int promptForAttemptCount() {
